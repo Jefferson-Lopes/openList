@@ -43,6 +43,11 @@ class App(ctk.CTk):
         # do not resize
         self.resizable(False, False)
 
+        # define fonts
+        self.title_font = ctk.CTkFont(family='Alphamalemodern', size=56)
+        self.label_font = ctk.CTkFont(family='Brion', size=18, weight='bold')
+        self.text_font = ctk.CTkFont(family='Brion', size=14, weight='bold')
+
         # create widgets
         self.__create_widgets()
 
@@ -65,7 +70,7 @@ class App(ctk.CTk):
         self.title_label = ctk.CTkLabel(
             self.frame, 
             text='openList', 
-            font=('GOST Common', 56, 'bold')
+            font=self.title_font
         )
         self.title_label.grid(column=0, row=0, columnspan=2, pady=2*PADY, padx=PADX)
 
@@ -77,7 +82,7 @@ class App(ctk.CTk):
             height=30,
             width=300,
             corner_radius=RADIUS,
-            font=('GOST Common', 18)
+            font=self.label_font
         )
         self.link_entry.grid(column=0, row=1, pady=PADY/2, padx=PADX)
 
@@ -90,7 +95,7 @@ class App(ctk.CTk):
             width=220,
             corner_radius=RADIUS,
             state=ctk.NORMAL,
-            font=('GOST Common', 18)
+            font=self.label_font
         )
         self.get_path_button.grid(column=0, row=2, pady=PADY/2, padx=PADX)
 
@@ -103,7 +108,7 @@ class App(ctk.CTk):
             width=160,
             corner_radius=2*RADIUS,
             state=ctk.NORMAL,
-            font=('GOST Common', 18)
+            font=self.label_font
         )
         self.start_button.grid(column=1, row=1, rowspan=2, pady=PADY, padx=PADX)
 
@@ -113,7 +118,7 @@ class App(ctk.CTk):
             height=140,
             width=400,
             corner_radius=2*RADIUS,
-            font=('GOST Common', 14)
+            font=self.text_font
         )
         self.progress_text.grid(column=0, row=3, columnspan=2, sticky='wens', pady=PADY, padx=PADX)
 
