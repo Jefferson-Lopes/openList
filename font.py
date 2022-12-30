@@ -11,9 +11,10 @@ def populate(frame):
     listnumber = 1
     for item in fonts:
         label = "listlabel" + str(listnumber)
-        label = Label(frame,text=F'openList   -   {item}',font=(item, 16)).pack()
         listnumber += 1
-
+        if not 'Noto' in item: # workaround linux render problem
+            label = Label(frame,text=F'openList   -   {item}',font=(item, 16)).pack()
+        
 def onFrameConfigure(canvas):
     '''Reset the scroll region to encompass the inner frame'''
     canvas.configure(scrollregion=canvas.bbox("all"))
