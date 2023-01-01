@@ -40,6 +40,12 @@ Then just click the start button and follow the updates in the text box to see e
 
 :TODO:
 
+build command:
+
+```bash
+pyinstaller --noconfirm --onedir --windowed --add-data "C:/users/<user>/appdata/local/programs/python/python310/lib/site-packages/customtkinter;customtkinter/"  ".\openList.py" --add-data "README.md;." --add-data "resources/*;resources/"
+```
+
 ## Install instructions
 
 ### Linux
