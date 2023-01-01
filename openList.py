@@ -146,13 +146,16 @@ class App(ctk.CTk):
         # get path
         path = ctk.filedialog.askdirectory()
         
-        # convert string
-        self.path = path.replace('C:', '')
+        if len(path) != 0:
+            # convert string
+            self.path = path.replace('C:', '')
 
-        # update progress text box
-        self.print(F'Download path  :  {self.path}\n')
+            # update progress text box
+            self.print(F'Download path  :  {self.path}\n')
 
-        return True
+            return True
+        
+        return False
 
     def start_callback(self):
         """button start download callback, check 
