@@ -7,7 +7,7 @@ Autor: Jefferson Lopes
 Version: v1.0
 Email: jefferson.lopes@ee.ufcg.edu.br
 """
-
+import moviepy_build_fix # needed to build on windows
 import customtkinter as ctk
 from pytube import YouTube
 from pytube import Playlist
