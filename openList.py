@@ -45,8 +45,8 @@ class App(ctk.CTk):
 
         # define fonts
         self.title_font = ctk.CTkFont(family='Alphamalemodern', size=56)
-        self.label_font = ctk.CTkFont(family='Brion', size=16, weight='bold')
-        self.text_font = ctk.CTkFont(family='Brion', size=12, weight='bold')
+        self.label_font = ctk.CTkFont(family='Brion Light', size=16, weight='bold')
+        self.text_font = ctk.CTkFont(family='Brion Light', size=12, weight='bold')
 
         # create widgets
         self.__create_widgets()
