@@ -65,3 +65,13 @@ Run the following command in the project directory to install the dependencies:
 
     pip install -r requirements.txt
 
+and install the fonts by clicking in the .ttf files
+
+<div>
+    <img src="resources/install_font-Win-Alpha.png" width=374 style="padding: 0px 13px 0px 13px;"/>
+    <img src="resources/install_font-Win-Brion.png" width=374 style="padding: 0px 13px 0px 13px;"/>
+</div>
+
+It is now ready to run with:
+
+    python openList.py
