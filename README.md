@@ -5,6 +5,7 @@
 <div align="left">
     <img src="resources/openList-main.gif" width=600>
 </div>
+
 <br>
 
 # How to use
@@ -16,6 +17,7 @@ Copy the link from the homepage of a YouTube Playlist or from one of their video
 <div align="left">
     <img src="resources/youtube_page.png" width=600>
 </div>
+
 <br>
 
 ## 2 - Choose path
@@ -25,6 +27,7 @@ Choose the download location where the playlist will be downloaded
 <div align="left">
     <img src="resources/openList-choose_dir.gif" width=600>
 </div>
+
 <br>
 
 ## 3 - Start downloading
@@ -34,11 +37,16 @@ Then just click the start button and follow the updates in the text box to see e
 <div align="left">
     <img src="resources/openList-download.gif" width=600>
 </div>
+
 <br>
 
 # Run as Executable
 
-:TODO:
+Install the fonts after downloading the openList package from the repository releases, and then launch ```openList.exe``` for Windows or ```openList``` for Linux. 
+
+<div align="left">
+    <img src="resources/release.png" width=300>
+</div>
 
 <br>
 
