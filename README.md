@@ -61,6 +61,40 @@ It is now ready to run with:
 
     python3 openList.py
 
+### - Packaging
+
+To build the executable,  you cannot use the ```--onefile``` option of pyinstaller, because the customtkinter library includes not only .py files, but also data files like .json and .otf. PyInstaller is not able to pack them into a single .exe file, so you have to use the ```--onedir``` option. 
+
+Include the customtkinter directory manually with the ```--add-data``` option of pyinstaller. You can find the install location of the customtkinter library with the following command:
+
+    pip show customtkinter
+
+A location will be shown, for example: ```/home/<user>/.local/lib/python3.8/site-packages```
+
+Then add the library folder like this: 
+
+```bash
+--add-data "/home/<user>/.local/lib/python3.8/site-packages/customtkinter:customtkinter/"
+```
+
+Additionally, add the resources directory and README file to the build folder by including this command:
+
+```bash
+--add-data "resources/*:resources/" --add-data "README.md:."
+```
+
+Add the fonts as well:
+
+```bash
+--add-data "fonts/*.ttf:fonts/."
+```
+
+Ensure **pyinstaller** is set up and built by using the full command like this:
+
+```bash
+pyinstaller --noconfirm --onedir --windowed --add-data "/home/<user>/.local/lib/python3.8/site-packages/customtkinter:customtkinter/" --add-data "resources/*:resources/" --add-data "README.md:." --add-data "fonts/*.ttf:fonts/." "openList.py"
+```
+
 <br>
 
 ## Windows 
