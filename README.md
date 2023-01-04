@@ -104,8 +104,14 @@ Additionally, add the resources directory and README file to the build folder by
 --add-data "resources/*;resources/" --add-data "README.md;."
 ```
 
-Ensure ***pyinstaller** is set up and built by using the full command like this:
+Add the fonts as well:
 
 ```bash
-pyinstaller --noconfirm --onedir --windowed --add-data "C:/users/<user>/appdata/local/programs/python/python310/lib/site-packages/customtkinter;customtkinter/" --add-data "resources/*;resources/" --add-data "README.md;." ".\openList.py"
+--add-data "fonts/*.ttf;fonts/."
+```
+
+Ensure **pyinstaller** is set up and built by using the full command like this:
+
+```bash
+pyinstaller --noconfirm --onedir --windowed --add-data "C:/users/<user>/appdata/local/programs/python/python310/lib/site-packages/customtkinter;customtkinter/" --add-data "resources/*;resources/" --add-data "README.md;." --add-data "fonts/*.ttf;fonts/." ".\openList.py"
 ```
